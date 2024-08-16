@@ -1,0 +1,63 @@
+class ConstrcteurLivres {
+
+
+    String titre, auteur;
+    int anneeDePublication;
+    double isbn;
+    boolean stock;
+
+
+    public ConstrcteurLivres(String titre, String ecrivain, int anneeDeSortie, double numeroDeSerie, boolean etat
+    ) {
+
+
+        this.titre = titre; //Le fait que ce e soit pas dans l'autre sens n'est pas illogique ?
+        this.auteur = ecrivain;
+        this.anneeDePublication = anneeDeSortie;
+        this.isbn = numeroDeSerie;
+        this.stock = etat;
+
+    }
+
+    public String getTitre() {
+
+        return this.titre;
+    }
+
+    public String getAuteur() {
+
+        return this.auteur;
+    }
+
+    public int getAnneeDePublication() {
+
+        return this.anneeDePublication;
+    }
+
+    public boolean getStock() {
+
+        return this.stock;
+    }
+
+    public String setTitre() {
+
+        return this.titre;
+    }
+
+    public String setAuteur() {
+
+        return this.auteur;
+    }
+
+    public int setAnneeDePublication() {
+
+        return this.anneeDePublication;
+    }
+
+    public boolean setStock() {
+
+        return this.stock;
+    }
+
+
+}
