@@ -1,0 +1,37 @@
+public enum ActivitesLivres {
+
+    LOUER ("L"),
+
+    RENDU("R"),
+
+    AJOUTER("A"),
+
+    SUPPRIMER("S"),
+
+    INFORMATIONS("I");
+
+    private final String symbol;
+
+    ActivitesLivres(String symbol) {
+
+        this.symbol = symbol;
+
+    }
+
+    public static TypeDeTrajets fromSymbol(String symbol) {
+
+        for (TypeDeTrajets op : TypeDeTrajets.values()) {
+
+            if (op.getSymbol().equals(symbol.toUpperCase())) {
+
+                return op;
+
+
+            }
+
+
+        }
+        return null;
+
+    }
+}
