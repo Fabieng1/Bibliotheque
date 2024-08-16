@@ -1,0 +1,88 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Bibliotheque {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList stockLivres = new ArrayList();
+
+        //Création et initialisation des viariables
+        String titre = " ", auteur = " ", choix; //Initialisation obligatoire. Est-ce normal ?
+        int anneeDePublication = 0;
+        double isbn = 0;
+        boolean statut = true;
+
+        //Instatiation de l'objet livre
+        ConstrcteurLivres livres = new ConstrcteurLivres(titre, auteur, anneeDePublication, isbn, statut);
+
+        //Est-ce qu'un switch peut faire autant qu'un if/else-if/else
+
+        //Je demande à l'utilisateur ce qu'il souhaite faire. S'il n'entre pas une valeur correct, la question est reposer
+        do {
+            System.out.println("Que souhaitez-vous faire");
+            System.out.println("Louer un livre, taper L");
+            System.out.println("Faire un rendu de livre, taper R");
+            System.out.println("Ajouter un livre, taper A");
+            System.out.println("Supprimer un livre, taper S");
+            System.out.println("Voir les informations du livre, taper I");
+            choix = sc.nextLine();
+
+
+        } while (true); //C'est toujours quelque chose que je  ne comprends pas. Pourquoi est-ce faux de base ?
+
+
+            switch (choix) {
+
+                case "L":
+                    System.out.println("Entrez le titre du livre");
+                    titre = sc.nextLine();
+                    stockLivres.contains(titre);
+                    stockLivres.set(ActivitesLivres.titre) = false;
+
+                case "A":
+
+                    do {
+                        System.out.println("Quel est le titre du livre ?");
+                        titre = sc.nextLine();
+                        System.out.println("Quel est l'auteur du livre");
+                        auteur = sc.nextLine();
+                        System.out.println("Quel est l'année de publication du livre ?");
+                        anneeDePublication = sc.nextInt();
+                        System.out.println("Quel est l'ISBN du livre ?");
+                        isbn = sc.nextDouble();
+                        System.out.println("Est-il en stock O/N"); //Erreur avec l'entrée le l'ISBN. Probablement une erreur de taille
+                        statut = sc.nextBoolean();
+                    } while (true);
+                    break;
+
+
+            }
+
+
+
+
+
+            stockLivres.add(titre);
+            stockLivres.add(auteur);
+            stockLivres.add(anneeDePublication);
+            stockLivres.add(isbn);
+            stockLivres.add(statut);
+
+        }
+        System.out.println(livres.titre);
+        System.out.println(livres.auteur);
+        System.out.println(livres.anneeDePublication);
+        System.out.println(livres.isbn);
+        System.out.println(livres.stock);
+
+    }
+}
+
+
+
+
+
+
